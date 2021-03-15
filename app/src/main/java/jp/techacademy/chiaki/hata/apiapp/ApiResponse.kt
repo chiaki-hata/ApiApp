@@ -1,6 +1,7 @@
 package jp.techacademy.chiaki.hata.apiapp
-import com.google.gson.annotations.SerializedName
 
+import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class ApiResponse(
     @SerializedName("results")
@@ -20,16 +21,17 @@ data class Shop(
     @SerializedName("logo_image")
     val logoImage: String,
     @SerializedName("name")
-    val name: String
-
-)
+    val name: String,
+    @SerializedName("address")
+    val address: String
+): Serializable
 
 data class CouponUrls(
     @SerializedName("pc")
     var pc: String,
     @SerializedName("sp")
     var sp: String
-)
+): Serializable
 
 
 
